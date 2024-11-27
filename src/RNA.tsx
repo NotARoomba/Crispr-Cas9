@@ -6,29 +6,29 @@ Source: https://sketchfab.com/3d-models/rna-ddbd40955218446895acd331024c5b1b
 Title: RNA
 */
 
-import * as THREE from 'three'
-import React, { createRef, useRef } from 'react'
-import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three-stdlib'
-import { useFrame } from '@react-three/fiber'
+import * as THREE from "three";
+import { createRef } from "react";
+import { useGLTF } from "@react-three/drei";
+import { GLTF } from "three-stdlib";
+import { useFrame } from "@react-three/fiber";
 
 type GLTFResult = GLTF & {
   nodes: {
-    RNA_Material_0: THREE.Mesh
-  }
+    RNA_Material_0: THREE.Mesh;
+  };
   materials: {
-    Material: THREE.MeshStandardMaterial
-  }
-}
+    Material: THREE.MeshStandardMaterial;
+  };
+};
 
-export default function Model(props: JSX.IntrinsicElements['group']) {
-  const { nodes, materials } = useGLTF('/rna.glb') as GLTFResult
+export default function Model(props: JSX.IntrinsicElements["group"]) {
+  const { nodes, materials } = useGLTF("/rna.glb") as GLTFResult;
   const groupRef = createRef<THREE.Group<THREE.Object3DEventMap>>();
   useFrame(() => {
     if (groupRef.current) {
       groupRef.current.rotation.y += 0.01;
     }
-  })
+  });
   return (
     <group ref={groupRef} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, -0.61, 0]}>
@@ -43,7 +43,7 @@ export default function Model(props: JSX.IntrinsicElements['group']) {
         </group>
       </group>
     </group>
-  )
+  );
 }
 
-useGLTF.preload('/rna.glb')
+useGLTF.preload("/rna.glb");

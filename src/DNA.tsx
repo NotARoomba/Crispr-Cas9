@@ -7,7 +7,7 @@ Title: DNA
 */
 
 import * as THREE from "three";
-import React, { createRef, useRef } from "react";
+import { createRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import { useFrame } from "@react-three/fiber";
@@ -28,7 +28,7 @@ export default function Model(props: JSX.IntrinsicElements["group"]) {
     if (groupRef.current) {
       groupRef.current.rotation.z += 0.01;
     }
-  })
+  });
   return (
     <group ref={groupRef} {...props} dispose={null}>
       <group position={[0, 0, 0]}>

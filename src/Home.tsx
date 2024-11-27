@@ -1,4 +1,3 @@
-import React from "react";
 import { motion, Variants } from "framer-motion";
 import StepSection from "./StepSection";
 
@@ -90,12 +89,12 @@ export default function Home() {
           </motion.p>
         </div>
         <motion.p
-        variants={item}
-        animate="visible"
-        className="mx-auto -translate-y-12 font-semibold text-2xl"
-      >
-        <motion.p variants={bounce}>Scroll</motion.p>
-      </motion.p>
+          variants={item}
+          animate="visible"
+          className="mx-auto -translate-y-12 font-semibold text-2xl"
+        >
+          <motion.p variants={bounce}>Scroll</motion.p>
+        </motion.p>
       </motion.div>
       {steps.map(({ step, description, reverse }, index) => (
         <StepSection
