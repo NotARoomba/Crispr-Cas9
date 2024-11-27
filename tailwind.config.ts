@@ -1,11 +1,72 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 export default {
-  content: [  "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        eerie_black: {
+          DEFAULT: "#1d1e18",
+          100: "#060605",
+          200: "#0c0c0a",
+          300: "#12130f",
+          400: "#181914",
+          500: "#1d1e18",
+          600: "#4f5241",
+          700: "#80846a",
+          800: "#abae9a",
+          900: "#d5d7cd",
+        },
+        reseda_green: {
+          DEFAULT: "#6b8f71",
+          100: "#151c17",
+          200: "#2b392d",
+          300: "#405544",
+          400: "#56725b",
+          500: "#6b8f71",
+          600: "#88a68d",
+          700: "#a6bcaa",
+          800: "#c4d2c6",
+          900: "#e1e9e3",
+        },
+        celadon: {
+          DEFAULT: "#aad2ba",
+          100: "#1a3224",
+          200: "#356448",
+          300: "#4f966c",
+          400: "#79b993",
+          500: "#aad2ba",
+          600: "#bcdcc9",
+          700: "#cde5d6",
+          800: "#deede4",
+          900: "#eef6f1",
+        },
+        mint_green: {
+          DEFAULT: "#d9fff5",
+          100: "#005f46",
+          200: "#00be8b",
+          300: "#1effc3",
+          400: "#7cffdc",
+          500: "#d9fff5",
+          600: "#e2fff7",
+          700: "#eafff9",
+          800: "#f1fffb",
+          900: "#f8fffd",
+        },
+        celadon_light: {
+          DEFAULT: "#b9f5d8",
+          100: "#0b4b2c",
+          200: "#159658",
+          300: "#22df84",
+          400: "#6deaad",
+          500: "#b9f5d8",
+          600: "#c6f7df",
+          700: "#d4f9e7",
+          800: "#e2fbef",
+          900: "#f1fdf7",
+        },
+      },
+    },
   },
   plugins: [],
-} satisfies Config
-
+} satisfies Config;
